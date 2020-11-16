@@ -33,6 +33,10 @@ class Trainer extends Person {
 	void work() {
 		System.out.println(this.name + " evluates assignments as a Trainer.");
 	}
+	
+	public void evaluate() {
+		System.out.println(this.name + " can evaluate all day.");
+	}
 }
 
 
@@ -52,6 +56,10 @@ class Developer extends Person {
 	
 	void work() {
 		System.out.println(this.name + " pushes code as a Developer.");
+	}
+	
+	public void pushCode() {
+		System.out.println(this.name + " can push code all day.");
 	}
 }
 
