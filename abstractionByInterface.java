@@ -24,10 +24,14 @@ interface interfaceDeveloper {
 
   
 class trainerJob implements interfaceTrainer {
-	String name;
 	
-	public trainerJob(String name) {
-		super();
+	private String name;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -44,12 +48,16 @@ class trainerJob implements interfaceTrainer {
   
 class developerJob implements interfaceDeveloper { 
 	
-	String name;
+	private String name;
 	
-	public developerJob(String name) {
-		super();
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
 		this.name = name;
 	}
+
 
 	public void pushCode() {
 		System.out.println(name + " is a FullTime " + expertise + " Developer");
@@ -64,11 +72,16 @@ class developerJob implements interfaceDeveloper {
 
 class twoJobs implements interfaceTrainer, interfaceDeveloper { 
 	
-	String name;
-	public twoJobs(String name) {
-		super();
+	private String name;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
 		this.name = name;
 	}
+
 
 	public void train() {
 		System.out.println(name + " is a PatTime " + subject + " Trainer");
@@ -94,22 +107,25 @@ public class abstractionByInterface {
 	  public static void main (String[] args) { 
 	      
 		  //has only one interface's methods
-		  trainerJob trainer = new trainerJob("Parth");
+		  trainerJob trainer = new trainerJob();
+		  trainer.setName("Parth");
 		  trainer.train();
 		  trainer.evaluate();
 		  
 		  //has only one interface's methods 
-		  developerJob developer = new developerJob("Vedant");
+		  developerJob developer = new developerJob();
+		  developer.setName("Vedant");
 		  developer.pushCode();
 		  developer.attendMeeting();
 		  
 		  //has both interface's methods
-		  twoJobs wizard = new twoJobs("Yash");
-		  wizard.attendMeeting();
-		  wizard.evaluate();
+		  twoJobs wizard = new twoJobs();
+		  wizard.setName("Yash");
 		  wizard.pushCode();
+		  wizard.attendMeeting();
 		  wizard.train();
-	       
+		  wizard.evaluate();
+	      
 	    } 
 	
 	
