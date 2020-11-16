@@ -18,3 +18,8 @@ The following are concepts related to OOPS -
 
 ------------------------------------------------------------
 
+Nice Links - 
+
+https://raygun.com/blog/oop-concepts-java/
+https://www.studytonight.com/java/java-interface.php#
+
